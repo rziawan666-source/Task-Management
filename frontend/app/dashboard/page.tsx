@@ -84,9 +84,9 @@ export default function DashboardPage() {
         {/* Top bar */}
         <header className="flex items-center justify-between border-b border-slate-800 bg-slate-950/70 px-6 py-4 backdrop-blur">
           <div className="flex flex-col">
-            <h1 className="text-lg font-semibold tracking-tight">
-              Good day, {user.name.split(" ")[0] || "there"}
-            </h1>
+           <h1 className="text-3xl font-bold tracking-tight flex items-center gap-2">
+  👋 Good day, {user.name.split(" ")[0] || "there"}
+</h1>
             <p className="text-xs text-slate-400">
               Here&apos;s a calm view of what matters today.
             </p>

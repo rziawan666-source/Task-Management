@@ -133,7 +133,8 @@ export default function RegisterPage() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="flex h-10 w-full items-center justify-center rounded-md bg-emerald-400 px-3 text-sm font-medium text-slate-950 shadow-md shadow-emerald-400/40 transition hover:bg-emerald-300 disabled:cursor-not-allowed disabled:opacity-70"
+          className="flex h-10 w-full items-center justify-center rounded-lg bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 px-3 text-sm font-semibold text-white shadow-xl transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-70"
+          style={{ textShadow: '0 1px 2px rgba(0,0,0,0.4)' }}
         >
           {isSubmitting ? "Creating workspace..." : "Create account"}
         </button>

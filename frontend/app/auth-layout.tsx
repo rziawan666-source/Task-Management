@@ -34,7 +34,12 @@ export function AuthLayout({
         </div>
 
         <div className="max-w-lg space-y-6">
-          <h1 className="text-4xl font-semibold leading-tight tracking-tight">
+          <h1 className="text-4xl font-bold leading-tight tracking-tight 
+bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 
+bg-clip-text text-transparent 
+drop-shadow-lg 
+transition-all duration-300 
+hover:scale-105 hover:drop-shadow-2xl hover:from-blue-500 hover:to-purple-600">
             Bring clarity to your day.
           </h1>
           <p className="text-sm text-slate-300">
@@ -43,7 +48,7 @@ export function AuthLayout({
           </p>
           <div className="grid gap-3 text-sm text-slate-200 sm:grid-cols-2">
             <div className="rounded-xl bg-white/5 p-4 ring-1 ring-white/10">
-              <p className="font-medium">Plan with confidence</p>
+             <p className="font-medium text-red-500">Plan with confidence</p> 
               <p className="mt-1 text-xs text-slate-300">
                 Break your day into simple lists and sections that fit how you
                 actually think.
