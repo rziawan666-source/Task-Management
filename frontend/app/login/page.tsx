@@ -81,7 +81,7 @@ export default function LoginPage() {
             </label>
             <button
               type="button"
-              className="text-[11px] text-slate-400 hover:text-slate-200"
+              className="text-[11px] bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent transition-all duration-300 hover:from-pink-400 hover:to-purple-500"
             >
               Forgot password?
             </button>

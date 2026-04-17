@@ -48,7 +48,7 @@ hover:scale-105 hover:drop-shadow-2xl hover:from-blue-500 hover:to-purple-600">
           </p>
           <div className="grid gap-3 text-sm text-slate-200 sm:grid-cols-2">
             <div className="rounded-xl bg-white/5 p-4 ring-1 ring-white/10">
-             <p className="font-medium text-red-500">Plan with confidence</p> 
+             <p className="font-medium">Plan with confidence</p> 
               <p className="mt-1 text-xs text-slate-300">
                 Break your day into simple lists and sections that fit how you
                 actually think.
