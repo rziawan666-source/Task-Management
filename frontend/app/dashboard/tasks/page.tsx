@@ -15,6 +15,7 @@ export default function AllTasksPage() {
       emptyStateTitle="No tasks yet."
       emptyStateHint='Create one from the "Today" page.'
       showSearch
+      allowEditDelete
     />
   );
 }
