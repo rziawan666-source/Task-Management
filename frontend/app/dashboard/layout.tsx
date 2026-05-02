@@ -44,6 +44,64 @@ function NavIconCategories({ className }: { className?: string }) {
   );
 }
 
+function NavIconWeek({ className }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      width="18"
+      height="18"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.75"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden
+    >
+      <path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01" />
+    </svg>
+  );
+}
+
+function NavIconInbox({ className }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      width="18"
+      height="18"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.75"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden
+    >
+      <path d="M22 12h-6l-2 3h-4l-2-3H2" />
+      <path d="M5.45 5.11 2 12v8a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-8l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11Z" />
+    </svg>
+  );
+}
+
+function NavIconCheck({ className }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      width="18"
+      height="18"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.75"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden
+    >
+      <path d="M20 6 9 17l-5-5" />
+    </svg>
+  );
+}
+
 export default function DashboardLayout({ children }: { children: ReactNode }) {
   const { user, isLoading, logout } = useAuth();
   const router = useRouter();
@@ -106,33 +164,33 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
               </span>
             ) : null}
           </Link>
-          <button
-            type="button"
-            className="flex w-full cursor-default items-center gap-2 rounded-lg px-3 py-2 text-left text-slate-500"
-            disabled
+          <Link
+            href="/dashboard/week"
+            className={navLink("/dashboard/week", pathname === "/dashboard/week")}
           >
-            <span className="w-[18px]" />
-            This week
-            <span className="ml-auto text-[10px] text-slate-600">Soon</span>
-          </button>
-          <button
-            type="button"
-            className="flex w-full cursor-default items-center gap-2 rounded-lg px-3 py-2 text-left text-slate-500"
-            disabled
+            <NavIconWeek className="shrink-0 text-violet-300/90" />
+            <span className="flex-1">This week</span>
+          </Link>
+          <Link
+            href="/dashboard/tasks"
+            className={navLink(
+              "/dashboard/tasks",
+              pathname === "/dashboard/tasks"
+            )}
           >
-            <span className="w-[18px]" />
-            Upcoming
-            <span className="ml-auto text-[10px] text-slate-600">Soon</span>
-          </button>
-          <button
-            type="button"
-            className="flex w-full cursor-default items-center gap-2 rounded-lg px-3 py-2 text-left text-slate-500"
-            disabled
+            <NavIconInbox className="shrink-0 text-slate-300/90" />
+            <span className="flex-1">All tasks</span>
+          </Link>
+          <Link
+            href="/dashboard/completed"
+            className={navLink(
+              "/dashboard/completed",
+              pathname === "/dashboard/completed"
+            )}
           >
-            <span className="w-[18px]" />
-            Someday
-            <span className="ml-auto text-[10px] text-slate-600">Soon</span>
-          </button>
+            <NavIconCheck className="shrink-0 text-emerald-300/90" />
+            <span className="flex-1">Completed</span>
+          </Link>
         </nav>
 
         <p className="mb-2 mt-6 px-2 text-[10px] font-semibold uppercase tracking-wider text-slate-500">

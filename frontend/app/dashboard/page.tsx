@@ -375,7 +375,7 @@ export default function DashboardPage() {
             <button
               type="button"
               onClick={openModal}
-              className="inline-flex shrink-0 items-center justify-center rounded-md bg-emerald-400 px-4 py-2 text-xs font-medium text-slate-950 shadow-md shadow-emerald-400/40 hover:bg-emerald-300"
+              className="inline-flex shrink-0 items-center justify-center rounded-md bg-red-400 px-4 py-2 text-xs font-medium text-slate-950 shadow-md shadow-red-400/40 hover:bg-red-300"
             >
               Add a task
             </button>
