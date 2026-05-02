@@ -195,4 +195,14 @@ export const api = {
       method: "POST",
       body: JSON.stringify({ name }),
     }).then((r) => r.data),
+  updateCategory: (id: number, name: string) =>
+    request<CategoryResponse>(`/api/categories/${id}`, {
+      method: "PATCH",
+      body: JSON.stringify({ name }),
+    }).then((r) => r.data),
+  deleteCategory: (id: number) =>
+    request<void>(`/api/categories/${id}`, {
+      method: "DELETE",
+      skipJson: true,
+    }),
 };
